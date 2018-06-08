@@ -4,7 +4,9 @@
 */
 
 function returnObject(name) {
-    const someObject = name
+    const someObject = {
+        name: name
+    }
     return someObject;
 }
 
