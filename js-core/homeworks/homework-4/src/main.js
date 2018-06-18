@@ -132,16 +132,19 @@ function solution(arr) {
 }
 
 function returnAgeArr(arr) {
+
     let result = [];
-    let count = 0;
+
     for(let i = 0; i < arr.length; i++){
+
         let valueAge = arr[i];
-        if(valueAge.unknownAge){
-            result[count] = valueAge;
-            count++;
+
+        if(valueAge.unknownAge === true){
+            result.push(valueAge);
         }
-    }
     return result;
+
+    }
 }
 
 console.log(solution(array));
