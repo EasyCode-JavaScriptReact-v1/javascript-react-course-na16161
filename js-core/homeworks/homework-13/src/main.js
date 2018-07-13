@@ -72,26 +72,28 @@ console.log(student);
  *  и ответ должен прийти снова через 5 секунд
  *
  * */
- 
- /*тут я не доделала еще - доделаю обновлю*/
 
 class DataBase {
     constructor(){
         this.interval = 0;
         this.query = function(){
             var counter = 5;
-            
-        }
+            if (this.interval > 0) {
+                clearInterval(this.interval);
+            }
         var interval = setInterval(() => {
             this.interval = interval;
+            console.log(counter);
             counter--;
             if (counter == 0){
                 clearInterval(interval);
                 console.log('The web server is down');
             }
         },1000)
-    }
+    };
 }
+}
+
 
 const dataBase = new DataBase();
 dataBase.query();
